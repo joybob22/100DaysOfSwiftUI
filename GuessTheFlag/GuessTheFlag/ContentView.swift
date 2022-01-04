@@ -18,6 +18,8 @@ struct ContentView: View {
     @State private var usersScore = 0
     @State private var questionsAsked = 0
     
+//    @State private var stuff = 0.0
+    
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -45,12 +47,15 @@ struct ContentView: View {
                         Button {
                             //flag was tapped
                             flagTapped(number)
+//                            stuff+=360
                         } label: {
                             Image(countries[number])
                                 .renderingMode(.original)
                                 .clipShape(Capsule())
                                 .shadow(radius: 5)
+//                                .rotation3DEffect(.degrees(stuff), axis: (x: 0, y: 1, z: 0))
                         }
+                        
                     }
                 }
                 .frame(maxWidth: .infinity)
